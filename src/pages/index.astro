@@ -1,11 +1,32 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+
+const home = await getEntry('pages', 'home');
+if (!home) throw new Error('Missing homepage content at src/content/pages/home.md');
+const { Content, headings } = await home.render();
+const { title, intro } = home.data;
+
+const projects = await getCollection('projects', ({ data }) => !data.draft);
 ---
 
-<Layout>
-	<Welcome />
+<Layout pageTitle={title}>
+	{intro && <Welcome intro={intro} />}
+	<Content />
+	<ul class="grid">
+    {projects.map(p => (
+      <li>
+        <ProjectCard
+          title={p.data.title}
+          href={`/projects/${p.slug}/`}
+          summary={p.data.summary}
+          gallery={p.data.gallery}
+        />
+      </li>
+    ))}
+	</ul>
 </Layout>

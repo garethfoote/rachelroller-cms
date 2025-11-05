@@ -1,0 +1,45 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: main
+
+# public/admin/config.yml
+media_folder: ""   # files stored in repo
+public_folder: ""       # URLs used inside Markdown 
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    media_folder: "pages/" 
+    files: 
+      - label: "Homepage"
+        name: "home"
+        type: "file"
+        file: "src/content/pages/home.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          # Optional short intro if you want a separate teaser
+          - { label: "Intro", name: "intro", widget: "text", required: false }
+          # Main free text area, edited visually in Decap
+          - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Projects"
+    name: "projects"
+    type: "folder"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"   # writes index.md under a <slug> folder
+    media_folder: ""         # save uploads alongside index.md
+    public_folder: ""        # write relative paths in frontmatter
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "summary", label: "Summary", widget: "text" }
+      - { name: "body",  label: "Body",  widget: "markdown" }
+      - { name: 'gallery', label: "Gallery", widget: 'image', choose_url: true, media_library: {config: {multiple: true, max_files: 999}}}
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        default: "{{now}}"
+        date_format: "YYYY-MM-DD" # e.g. 24.12.2021
+        # format: "LLL"
+        picker_utc: false

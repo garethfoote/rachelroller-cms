@@ -1,3 +1,15 @@
+# Start developing
+
+In separate terminal windows:
+
+1. `npm run dev` 
+2. `npx decap-server`
+
+## Stack
+
+- Astro for the frontend site generation
+- Decap CMS supplying editable content via the local CMS UI
+
 # Astro Starter Kit: Basics
 
 ```sh
