@@ -2,7 +2,7 @@
 
 @layer components {
   .heading {
-    @apply uppercase tracking-wide text-xs border-b border-gray-200;
+    @apply uppercase tracking-wide border-b border-gray-200;
     @apply pt-0 mt-0 mb-3 min-h-28;
   }
 }

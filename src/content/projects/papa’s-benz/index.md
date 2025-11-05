@@ -5,7 +5,7 @@ summary: For twenty years Rachel Roller's father kept the used car dealers'
   collecting them in a pile on the dashboard.
 gallery:
   - /uploads/projects/papa’s-benz/benz_insta1.jpg
-date: 2025-10-08
+date: 2023-06-08
 ---
 For twenty years Rachel Roller's father kept the used car dealers' business cards left under the windscreen wiper of his Mercedes Benz, collecting them in a pile on the dashboard.
 

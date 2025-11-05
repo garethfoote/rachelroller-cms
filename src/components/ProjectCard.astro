@@ -16,12 +16,17 @@ const gallery = (data.gallery ?? []) as string[];
 const cover = data.gallery[0]; // first image URL
 ---
 
-<article class="card prose prose-neutral">
+<article class="border-b border-gray-200 mb-6">
   
-    {cover && <img src={cover} alt={title} loading="lazy" decoding="async" />}
-    <h2>{title}</h2>
-    <Content />
-  
+    {cover && <img class="pb-3" src={cover} alt={title} loading="lazy" decoding="async" />}
+
+    <div class="flex flex-wrap">
+      <h2 class="w-1/2">{title}</h2>
+      <div class="w-1/2 pb-3">
+        <Content />
+      </div>
+    </div>
+      
 </article>
 
 <!-- <style>
