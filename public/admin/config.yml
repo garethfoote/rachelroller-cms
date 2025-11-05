@@ -12,7 +12,7 @@ backend:
 media_folder: ""   # files stored in repo
 public_folder: ""       # URLs used inside Markdown 
 
-publish_mode: editorial_workflow
+publish_mode: simple
 
 collections:
   - label: "Pages"
