@@ -15,22 +15,24 @@ const projects = await getCollection('projects', ({ data }) => !data.draft);
 ---
 
 <Layout pageTitle={title}>
-  <div>
-    <Welcome title={title} intro={intro} />
-    <Content />
+  <div class="flex min-h-screen p-6">
+    <header class="w-1/4 min-w-[200px] pr-3 border-r border-gray-200">
+      <Welcome title={title} intro={intro} />
+      <Content />
+    </header>
+    <main class="flex-1 p-6">
+      <ul class="grid">
+        {projects.map(p => (
+          <li>
+            <ProjectCard
+              title={p.data.title}
+              href={`/projects/${p.slug}/`}
+              summary={p.data.summary}
+              gallery={p.data.gallery}
+            />
+          </li>
+        ))}
+      </ul>
+    </main>
   </div>
-  <main>
-    <ul class="grid">
-      {projects.map(p => (
-        <li>
-          <ProjectCard
-            title={p.data.title}
-            href={`/projects/${p.slug}/`}
-            summary={p.data.summary}
-            gallery={p.data.gallery}
-          />
-        </li>
-      ))}
-    </ul>
-  </main>
 </Layout>

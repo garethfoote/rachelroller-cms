@@ -6,11 +6,11 @@ interface Props {
 const { title = "Rachel Roller", intro="" } = Astro.props;
 ---
 
-<header>
-  <h1>{title}</h1>
-  <div>
-    <a href="">Email</a>
-    <a href="">Instagram</a>
-    <p>{intro}</p>
-  </div>
-</header>
+<h1>{title}</h1>
+<div>
+  <nav class="space-y-1 mb-6">
+    <a href="#" class="block hover:underline">Email</a>
+    <a href="#" class="block hover:underline">Instagram</a>
+  </nav>
+  <p>{intro}</p>
+</div>
