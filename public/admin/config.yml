@@ -1,11 +1,18 @@
 local_backend: true
 backend:
   name: git-gateway
+  repo: garethfoote/rachelroller-cms
   branch: main
+  # these three tell Decap to use your site’s OAuth endpoints
+  base_url: https://rachelroller.netlify.app
+  auth_endpoint: oauth
+  site_domain: rachelroller.netlify.app
 
 # public/admin/config.yml
 media_folder: ""   # files stored in repo
 public_folder: ""       # URLs used inside Markdown 
+
+publish_mode: editorial_workflow
 
 collections:
   - label: "Pages"
