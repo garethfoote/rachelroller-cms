@@ -43,8 +43,6 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
             ←
           </span>
         </button>
-      <!-- <Welcome title={title} intro={intro} />
-      <Content /> -->
 
        <!-- Sheet content -->
       <div id="mobileSheetBody" class="px-3 pb-5 md:px-0 md:pb-0">
@@ -57,7 +55,7 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
       class="fixed inset-0 bg-black/30 opacity-0 pointer-events-none transition-opacity z-30 md:hidden"
     ></div>
     <main class="min-w-0 flex-1 px-3 lg:h-screen lg:overflow-y-auto">
-      <div class="w-full max-w-full lg:max-w-[50%]">
+      <div class="w-full max-w-full lg:max-w-[60%]">
         <h2 class="heading">Work</h2>
         <ul class="grid">
           {projects.map(p => (
