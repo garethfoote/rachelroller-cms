@@ -10,7 +10,7 @@ summary: >-
 
   Postcard edition of 200
 gallery:
-  - postcard-rachel-roller.jpg
+  - /uploads/projects/test-1/postcard-rachel-roller.jpg
 date: 2025-10-08
 ---
 sdcascas

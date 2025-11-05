@@ -10,7 +10,7 @@ const projects = defineCollection({
     type: 'content',
     schema: ({ image }) => z.object({
         title: z.string(),
-        gallery: z.array(image()).optional(), // 👈 typed images        
+        gallery: z.array(z.string()).optional(),   
         summary: z.string().optional(),
         draft: z.boolean().default(false),
         date: z.coerce.date().optional(), // will parse ISO strings reliably

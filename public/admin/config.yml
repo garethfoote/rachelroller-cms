@@ -9,8 +9,8 @@ backend:
   site_domain: rachelroller.netlify.app
 
 # public/admin/config.yml
-media_folder: ""   # files stored in repo
-public_folder: ""       # URLs used inside Markdown 
+media_folder: "public/uploads"    # where files are stored in the repo
+public_folder: "/uploads"         # how those files are referenced in content
 
 publish_mode: simple
 
@@ -36,8 +36,9 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"   # writes index.md under a <slug> folder
-    media_folder: ""         # save uploads alongside index.md
-    public_folder: ""        # write relative paths in frontmatter
+    # Recommended: store each project’s media under /public/uploads/projects/<slug>
+    media_folder: "/public/uploads/projects/{{slug}}"
+    public_folder: "/uploads/projects/{{slug}}"
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "summary", label: "Summary", widget: "text" }
