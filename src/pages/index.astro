@@ -13,7 +13,7 @@ const { title, intro } = home.data;
 
 // const projects = await getCollection('projects', ({ data }) => !data.draft);
 const projects = (await getCollection('projects', ({ data }) => !data.draft))
-  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()).reverse();
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 ---
 
 <Layout pageTitle={title}>
