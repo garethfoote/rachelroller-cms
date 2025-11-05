@@ -10,7 +10,6 @@ summary: >-
 
   Postcard edition of 200
 gallery:
-  - image.png
   - postcard-rachel-roller.jpg
 date: 2025-10-08
 ---
