@@ -11,7 +11,9 @@ if (!home) throw new Error('Missing homepage content at src/content/pages/home.m
 const { Content, headings } = await home.render();
 const { title, intro } = home.data;
 
-const projects = await getCollection('projects', ({ data }) => !data.draft);
+// const projects = await getCollection('projects', ({ data }) => !data.draft);
+const projects = (await getCollection('projects', ({ data }) => !data.draft))
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 ---
 
 <Layout pageTitle={title}>

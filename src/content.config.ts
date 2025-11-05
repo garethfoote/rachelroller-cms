@@ -13,7 +13,7 @@ const projects = defineCollection({
         gallery: z.array(z.string()).optional(),   
         summary: z.string().optional(),
         draft: z.boolean().default(false),
-        date: z.coerce.date().optional(), // will parse ISO strings reliably
+        date: z.coerce.date(), // will parse ISO strings reliably
     })
 });
 
