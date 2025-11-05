@@ -29,10 +29,7 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
           {projects.map(p => (
             <li>  
               <ProjectCard
-                title={p.data.title}
-                href={`/projects/${p.slug}/`}
-                summary={p.data.summary}
-                gallery={p.data.gallery}
+                project={p}
               />
             </li>
           ))}

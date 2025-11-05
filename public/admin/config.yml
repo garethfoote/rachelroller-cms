@@ -42,7 +42,6 @@ collections:
     
     fields:
       - { name: "title", label: "Title", widget: "string" }
-      - { name: "summary", label: "Summary", widget: "text" }
       - { name: "body",  label: "Body",  widget: "markdown" }
       - { name: 'gallery', label: "Gallery", widget: 'image', choose_url: true, media_library: {config: {multiple: true, max_files: 999}}}
       - label: "Date"
@@ -53,8 +52,7 @@ collections:
         # format: "LLL"
         picker_utc: false
     
-    # 👇 Sort newest first by default
     sort: "date:desc"
-
     summary: "{{title}} — {{date | date('MMM D, YYYY')}}"
+    thumbnail: "{{gallery}}"
 

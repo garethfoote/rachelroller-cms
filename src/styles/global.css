@@ -6,3 +6,9 @@
     @apply pt-0 mt-0 mb-3 min-h-28;
   }
 }
+
+@layer base {
+  p, ul, ol {
+    @apply mb-4;
+  }
+}

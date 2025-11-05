@@ -1,23 +1,27 @@
 ---
-import type { ImageMetadata } from 'astro';
-type Img = string | ImageMetadata;
+import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
-  title: string;
-  href: string;
-  summary?: string;
-  gallery?: string[];   // ← URLs like "/uploads/one.jpg"
+  project: CollectionEntry<'projects'>; // full, typed entry
 }
-const { title, href, summary, gallery = [] } = Astro.props;
-const cover = gallery[0]; // first image URL
+
+const { project } = Astro.props;
+const { data, slug, body } = project;
+const { Content } = await project.render();
+
+const href = `/projects/${slug}/`;
+const title = data.title;
+
+const gallery = (data.gallery ?? []) as string[];
+const cover = data.gallery[0]; // first image URL
 ---
 
-<article class="card">
-  <a href={href}>
+<article class="card prose prose-neutral">
+  
     {cover && <img src={cover} alt={title} loading="lazy" decoding="async" />}
     <h2>{title}</h2>
-    {summary && <p>{summary}</p>}
-  </a>
+    <Content />
+  
 </article>
 
 <!-- <style>
