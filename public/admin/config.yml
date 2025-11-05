@@ -1,6 +1,6 @@
 local_backend: true
 backend:
-  name: git-gateway
+  name: github
   repo: garethfoote/rachelroller-cms
   branch: main
   # these three tell Decap to use your site’s OAuth endpoints
