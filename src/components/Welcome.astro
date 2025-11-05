@@ -1,9 +1,16 @@
 ---
 interface Props {
-  intro: string;
+  intro?: string;
+  title?: string;
 }
-const { intro } = Astro.props;
+const { title = "Rachel Roller", intro="" } = Astro.props;
 ---
 
-{intro && <p>{intro}</p>}
-
+<header>
+  <h1>{title}</h1>
+  <div>
+    <a href="">Email</a>
+    <a href="">Instagram</a>
+    <p>{intro}</p>
+  </div>
+</header>
