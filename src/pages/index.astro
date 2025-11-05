@@ -15,17 +15,17 @@ const projects = await getCollection('projects', ({ data }) => !data.draft);
 ---
 
 <Layout pageTitle={title}>
-  <div class="flex min-h-screen p-3">
-    <header class="w-1/4 min-w-[200px] pr-3 border-r border-gray-200">
+  <div class="flex lg:h-screen min-h-screen p-3 lg:overflow-hidden">
+    <header class="flex-none sticky top-0 w-1/4 min-w-[200px] pr-3 border-r border-gray-200">
       <Welcome title={title} intro={intro} />
       <Content />
     </header>
-    <main class="flex-1 px-3">
+    <main class="min-w-0 flex-1 px-3 lg:h-screen lg:overflow-y-auto">
       <div class="w-full max-w-full lg:max-w-[50%]">
         <h2 class="heading">Work</h2>
         <ul class="grid">
           {projects.map(p => (
-            <li>
+            <li>  
               <ProjectCard
                 title={p.data.title}
                 href={`/projects/${p.slug}/`}
