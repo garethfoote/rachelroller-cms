@@ -5,8 +5,7 @@ gallery:
   - /uploads/projects/test-1/postcard-rachel-roller.jpg
 date: 2025-10-07
 ---
-Dear Klaus — Thanks for your email. I wish you had sent me a postcard. — Yours, Rachel” Rachel Roller sent postcards to her uncle, hoping he would return the favour. Instead, he replied by email. When she asked him to write these words on a postcard, he said, “It’s been some time since I wrote by hand.”
+Dear Klaus — Thanks for your email. I wish you had sent me a postcard. — Yours, Rachel” Rachel Roller sent postcards to her uncle, hoping he would return the favour. Instead, he replied by email. 
 
-
-
-Postcard edition of 200
+Postcard edition of 200 (First Edition in black)\
+Postcard edition of 200 (Second Edition in blue)
