@@ -6,8 +6,8 @@ summary: >
   the following: a pen knife, perfume bottle, a handkerchief, sugar cube, a pen,
   a comb, matches, cough drop, a rain hood and a purse.
 gallery:
-  - /uploads/projects/oma’s-bags/position_bags_insat_cover.jpg
   - /uploads/projects/oma’s-bags/position_bags_insat1.jpg
+  - /uploads/projects/oma’s-bags/position_bags_insat_cover.jpg
   - /uploads/projects/oma’s-bags/position_bags_insat2.jpg
   - /uploads/projects/oma’s-bags/position_bags_insat5.jpg
   - /uploads/projects/oma’s-bags/position_bags_insat8.jpg
