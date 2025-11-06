@@ -16,8 +16,8 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
   .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 ---
 
-<Layout pageTitle={title}>
-  <div class="flex lg:h-screen min-h-screen p-3 lg:overflow-hidden">
+<Layout pageTitle={title} >
+  <div class="font-bdo text-base flex lg:h-screen min-h-screen p-3 lg:overflow-hidden">
     <header 
       id="mobileSheet"
       style="--handle-h: 3rem;"
