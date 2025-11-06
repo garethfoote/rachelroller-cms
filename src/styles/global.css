@@ -66,7 +66,7 @@
 
 @layer base {
   body { 
-    @apply font-roboto-mono text-sm/5; 
+    @apply font-roboto-mono text-sm/[17px]; 
   }
 
   p, ul, ol {
