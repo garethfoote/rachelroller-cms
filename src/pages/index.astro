@@ -90,8 +90,13 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
     // flip arrow
     arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
 
+    // backdrop visibility + hit-testing
     backdrop.classList.toggle('opacity-100', isOpen);
+    backdrop.classList.toggle('opacity-0', !isOpen);
     backdrop.classList.toggle('pointer-events-auto', isOpen);
+    backdrop.classList.toggle('pointer-events-none', !isOpen);
+
+    // lock scroll on open (optional)
     document.documentElement.classList.toggle('overflow-hidden', isOpen);
   }
 
