@@ -1,0 +1,62 @@
+---
+interface Props {
+  images: string[];
+  id: string;
+  perPage?: number;
+  alt?: string;
+}
+const { images, id, perPage = 1, alt = '' } = Astro.props as Props;
+---
+
+<section
+  id={id}
+  class="splide pb-3"
+  data-gallery-id={id}
+  data-per-page={perPage}
+  aria-label="Image gallery"
+>
+  <div class="splide__track">
+    <ul class="splide__list">
+      {images.map((src) => (
+        <li class="splide__slide">
+          <img src={src} alt={alt} loading="lazy" decoding="async" />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .splide__slide img { display:block; width:100%; height:auto; }
+  .splide__pagination { bottom:0.5rem; }
+  .splide__pagination__page { width:6px; height:6px; opacity:0.45; }
+  .splide__pagination__page.is-active { transform:scale(1.25); opacity:1; }
+</style>
+
+<script>
+  import Splide from '@splidejs/splide';
+  import '@splidejs/splide/css/core';
+
+  // Support multiple galleries on the same page:
+    const nodes = document.querySelectorAll<HTMLElement>('.splide[data-gallery-id]');
+    nodes.forEach((root) => {
+    const perPageAttr =
+      parseInt(root.getAttribute('data-per-page') || '1', 10) || 1;
+
+    const splide = new Splide(root, {
+      type: 'loop',
+      pagination: true,
+      arrows: false,
+      perPage: perPageAttr,
+      perMove: 1,
+      gap: '0.75rem',
+      focus: 'center',
+      omitEnd: true,
+      breakpoints: {
+        640: { perPage: 1, gap: '0.5rem' },
+        1024: { perPage: perPageAttr }
+      }
+    });
+    splide.mount();
+  });
+</script>

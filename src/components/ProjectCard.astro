@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Gallery from "../components/Gallery.astro";
 
 export interface Props {
   project: CollectionEntry<'projects'>; // full, typed entry
@@ -14,11 +15,29 @@ const title = data.title;
 
 const gallery = (data.gallery ?? []) as string[];
 const cover = data.gallery[0]; // first image URL
+
+const safeId = (title: string) =>
+  'gallery-' +
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')   // replace non-alphanumeric with hyphen
+    .replace(/(^-|-$)+/g, '');     // remove leading/trailing hyphens
 ---
 
 <article class="border-b border-gray-200 mb-6">
   
-    {cover && <img class="pb-3" src={cover} alt={title} loading="lazy" decoding="async" />}
+    {data.gallery?.length === 1 ? (
+      <img
+        class="pb-3"
+        src={cover}
+        alt={title}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <Gallery id={safeId(title)} images={data.gallery} perPage={1} />
+    )}
 
     <div class="flex flex-wrap">
       <h2 class="w-1/3 md:w-1/2">{title}</h2>
