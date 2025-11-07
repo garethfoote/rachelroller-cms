@@ -30,7 +30,7 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
         z-40">
         <button
           id="mobileSheetToggle"
-          class="md:hidden absolute w-full h-5"
+          class="md:hidden absolute w-full top-0 left-0 h-12"
           aria-controls="mobileSheetBody"
           aria-expanded="false"
         >
@@ -38,7 +38,7 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
           <span
             id="arrowIcon"
             aria-hidden="true"
-            class="transition-transform duration-300 select-none absolute left-[-5px] top-0 rotate-90"
+            class="transition-transform duration-300 select-none absolute left-2 top-3 rotate-90"
           >
             ←
           </span>
