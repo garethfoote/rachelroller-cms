@@ -15,8 +15,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'TWK Ghost';
+  src: url('/fonts/TWKGhost-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
+  --font-twk-ghost: "TWK Ghost", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-roboto-mono: "Roboto Mono", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 } 
 
@@ -32,7 +40,7 @@
 
 @layer base {
   body { 
-    @apply font-roboto-mono text-sm/[17px]; 
+    @apply font-twk-ghost text-sm/[17px]; 
   }
 
   p, ul, ol {
