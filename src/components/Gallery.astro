@@ -28,9 +28,6 @@ const { images, id, perPage = 1, alt = '' } = Astro.props as Props;
 
 <style>
   .splide__slide img { display:block; width:100%; height:auto; }
-  .splide__pagination { bottom:0.5rem; }
-  .splide__pagination__page { width:6px; height:6px; opacity:0.45; }
-  .splide__pagination__page.is-active { transform:scale(1.25); opacity:1; }
 </style>
 
 <script>
@@ -45,7 +42,7 @@ const { images, id, perPage = 1, alt = '' } = Astro.props as Props;
 
     const splide = new Splide(root, {
       type: 'loop',
-      pagination: true,
+      pagination: false,
       arrows: false,
       perPage: perPageAttr,
       perMove: 1,
@@ -58,5 +55,35 @@ const { images, id, perPage = 1, alt = '' } = Astro.props as Props;
       }
     });
     splide.mount();
+
+    // --- Tap left/right to go prev/next (ignores drags and long presses) ---
+    let startX = 0, startY = 0, startT = 0;
+    const TAP_DIST = 10;   // px
+    const TAP_TIME = 300;  // ms
+
+    root.addEventListener('pointerdown', (e) => {
+      startX = e.clientX; startY = e.clientY; startT = performance.now();
+    }, { passive: true });
+
+    root.addEventListener('pointerup', (e) => {
+      // ignore if the user interacted with controls/links/buttons inside the slide
+      const t = e.target as HTMLElement;
+      if (t.closest('a, button, [data-no-tap]')) return;
+
+      const dist = Math.hypot(e.clientX - startX, e.clientY - startY);
+      const dt = performance.now() - startT;
+      if (dist > TAP_DIST || dt > TAP_TIME) return; // it was a drag or long press
+
+      const rect = root.getBoundingClientRect();
+      const mid = rect.left + rect.width / 2;
+      if (e.clientX > mid) splide.go('>'); else splide.go('<');
+    });
+
+    // Optional: keyboard left/right when the gallery is focused
+    root.tabIndex = 0;
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); splide.go('>'); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); splide.go('<'); }
+    });
   });
 </script>
