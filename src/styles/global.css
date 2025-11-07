@@ -40,7 +40,7 @@
 
 @layer base {
   body { 
-    @apply font-twk-ghost text-sm/[17px]; 
+    @apply font-twk-ghost text-sm/[18px]; 
   }
 
   p, ul, ol {
