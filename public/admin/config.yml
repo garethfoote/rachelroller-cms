@@ -25,10 +25,15 @@ collections:
         file: "src/content/pages/home.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - label: "Anchor Links"
+            name: "anchor_links"
+            widget: "list"
+            summary: "{{fields.title}} → {{fields.url}}"
+            fields:
+              - { label: "Link title", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
           # Optional short intro if you want a separate teaser
           - { label: "Intro", name: "intro", widget: "text" }
-          # Main free text area, edited visually in Decap
-          - { label: "Body", name: "body", widget: "markdown", required: false }
   - label: "Projects"
     name: "projects"
     type: "folder"

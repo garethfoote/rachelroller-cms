@@ -22,6 +22,14 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     intro: z.string().optional(),
+    anchor_links: z
+      .array(
+        z.object({
+          title: z.string(),
+          url: z.string(),
+        }),
+      )
+      .optional(),
   }),
 });
 

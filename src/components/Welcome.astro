@@ -1,16 +1,32 @@
 ---
+interface AnchorLink {
+  title: string;
+  url: string;
+}
+
 interface Props {
   intro?: string;
   title?: string;
+  anchor_links?: AnchorLink[];
 }
-const { title = "Rachel Roller", intro="" } = Astro.props;
+
+const {
+  title = "Rachel Roller",
+  intro = "",
+  anchor_links = [],
+} = Astro.props;
 ---
 
 <h1 class="heading">{title}</h1>
 <div>
   <nav class="space-y-1 mb-6">
-    <a href="#" class="block hover:underline">Email</a>
-    <a href="#" class="block hover:underline">Instagram</a>
+    {anchor_links.map((link) => (
+      <a href={link.url} target="_blank" class="block hover:underline">
+        {link.title}
+      </a>
+    ))}
+    <!-- <a href="#" class="block hover:underline">Email</a> -->
+    <!-- <a href="#" class="block hover:underline">Instagram</a> -->
   </nav>
   <p>{intro}</p>
 </div>

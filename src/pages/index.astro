@@ -9,7 +9,7 @@ import { getCollection } from 'astro:content';
 const home = await getEntry('pages', 'home');
 if (!home) throw new Error('Missing homepage content at src/content/pages/home.md');
 const { Content, headings } = await home.render();
-const { title, intro } = home.data;
+const { title, intro, anchor_links } = home.data;
 
 // const projects = await getCollection('projects', ({ data }) => !data.draft);
 const projects = (await getCollection('projects', ({ data }) => !data.draft))
@@ -46,7 +46,7 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
 
        <!-- Sheet content -->
       <div id="mobileSheetBody" class="px-3 pb-5 md:px-0 md:pb-0">
-        <Welcome title={title} intro={intro} />
+        <Welcome title={title} intro={intro} anchor_links={anchor_links} />
         <Content />
       </div>
     </header>
