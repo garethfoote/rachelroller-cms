@@ -2,7 +2,7 @@
 title: Certificate of Authentication
 gallery:
   - /uploads/projects/certificate-of-authentication/certificate.jpg
-date: 1902-11-23
+date: 2020-11-23
 ---
 Rachel Roller's Certificate of Authentication.
 
