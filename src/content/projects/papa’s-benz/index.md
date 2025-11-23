@@ -25,3 +25,4 @@ For twenty years Rachel Roller's father kept the used car dealers' business card
 Edition of 200.
 
 [Buy](https://edcat.net/item/papas-benz/)
+a href="#" target="_blank" rel="noopener noreferrer">Link</a>
