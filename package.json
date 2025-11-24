@@ -14,6 +14,7 @@
     "@tailwindcss/vite": "^4.1.14",
     "astro": "^5.14.1",
     "astro-decap-cms-oauth": "^0.5.1",
+    "rehype-external-links": "^3.0.0",
     "remark-breaks": "^4.0.0",
     "tailwindcss": "^4.1.14"
   }

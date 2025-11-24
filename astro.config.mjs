@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import decapCmsOauth from 'astro-decap-cms-oauth';
 import netlify from '@astrojs/netlify';
 import remarkBreaks from 'remark-breaks';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,8 +14,11 @@ export default defineConfig({
 
   integrations: [decapCmsOauth()],
   adapter: netlify(),
-    markdown: {
+  markdown: {
     remarkPlugins: [remarkBreaks], // converts single \n to <br>
+    rehypePlugins: [
+      [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]
+    ]
   },
 });
 
