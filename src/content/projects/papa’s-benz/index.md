@@ -15,11 +15,11 @@ date: 2023-06-08
 ---
 For twenty years Rachel Roller's father kept the used car dealers' business cards left under the windscreen wiper of his Mercedes Benz, collecting them in a pile on the dashboard.
 
-* **Pages**: 48
-* **Dimensions**: 100 x 150mm
-* **Printing**: Offset
-* **Binding**: Three Hole Pamphlet Binding
-* **Year**: 2022
+* Pages: 48
+* Dimensions: 100 x 150mm
+* Printing: Offset
+* Binding: Three Hole Pamphlet Binding
+* Year: 2022
 
 Edition of 200.
 
