@@ -5,8 +5,6 @@ anchor_links:
     url: mailto:rachelroller@rahelzoller.com
   - title: Instagram
     url: https://www.instagram.com/rachel__roller/?hl=en
-  - title: Rachel Roller at The Hayward
-    url: www.hayward.com
 intro: Rachel Roller is an artist specialising in artist’s books and printed
   matter. Her work draws on literature, poetry, and personal narratives,
   transforming found objects and ephemera into intimate publications. Using
