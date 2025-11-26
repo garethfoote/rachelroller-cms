@@ -6,7 +6,7 @@ summary: For twenty years Rachel Roller's father kept the used car dealers'
 gallery:
   - /uploads/projects/papa’s-benz/benz_insta4.jpg
   - /uploads/projects/papa’s-benz/benz_insta5.jpg
-  - /uploads/projects/papa’s-benz/benz_insta4.jpg
+  - /uploads/projects/papa’s-benz/benz_insta6_1.jpg
   - /uploads/projects/papa’s-benz/benz_insta1.jpg
   - /uploads/projects/papa’s-benz/benz_insta8-copy.jpg
   - /uploads/projects/papa’s-benz/benz_insta6.jpg
