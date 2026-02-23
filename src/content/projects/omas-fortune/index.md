@@ -1,7 +1,6 @@
 ---
 title: Oma's Fortune
 gallery:
-  - /uploads/projects/omas-fortune/_dsc8249_2.jpg
   - /uploads/projects/omas-fortune/_dsc8248_2.jpg
   - /uploads/projects/omas-fortune/_dsc8245_retouched.jpg
   - /uploads/projects/omas-fortune/clovers_spread_02.jpg
