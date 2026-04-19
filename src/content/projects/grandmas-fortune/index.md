@@ -16,7 +16,7 @@ The special edition of 25 copies features an original clover from the collection
 
 Pages: 300
 Dimensions: 115 x 155mm
-Printing: Offset\
+Printing: Offset
 Binding: Ota-Binding\
 Year: 2026\
 Edition of 500\
