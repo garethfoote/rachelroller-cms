@@ -12,7 +12,7 @@ A collection of over one hundred four- and five-leaved clovers inherited from Ra
 \
 An altered facsimile of *Oma’s Fortune*, a book of pressed clovers handed down to Rachel Roller (see original below).\
 
-The special edition of 25 copies features an original clover from the collection, foiled stamped with its edition number and housed in a glassine envelope.\
+The special edition of 25 copies features an original clover from the collection and housed in a glassine envelope.\
 \
 Pages: 300\
 Dimensions: 115 x 155mm\
