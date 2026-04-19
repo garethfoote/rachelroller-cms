@@ -22,6 +22,6 @@ Pages: 300
 
 * Year: 2022
 
-Edition of 200.
+Edition of 500.
 
 [Buy](https://foolscap-editions.com/grandmas-fortune/)
