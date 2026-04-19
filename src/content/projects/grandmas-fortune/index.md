@@ -12,16 +12,12 @@ A collection of over one hundred four- and five-leaved clovers inherited from Ra
 
 The special edition of 25 copies features an original clover from the collection, foiled stamped with its edition number and housed in a glassine envelope.\
 \
-Pages: 300
-
-* Dimensions: 115 x 155mm
-
-* Printing: Offset
-
-* Binding: Ota-Binding
-
-* Year: 2022
-
-Edition of 500.
+Pages: 300\
+Dimensions: 115 x 155mm\
+Printing: Offset\
+Binding: Ota-Binding\
+Year: 2026\
+Edition of 500\
+Published by [Foolscap Editions](https://foolscap-editions.com/)
 
 [Buy](https://foolscap-editions.com/grandmas-fortune/)
