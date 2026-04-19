@@ -9,13 +9,13 @@ gallery:
 date: 2026-04-19
 ---
 A collection of over one hundred four- and five-leaved clovers inherited from Rachel Roller’s late grandmother. A lifetime of luck pressed between the pages of Wild Flowers of the Wayside and Woodland.
-\
-An altered facsimile of *Oma’s Fortune*, a book of pressed clovers handed down to Rachel Roller (see original below).\
 
-The special edition of 25 copies features an original clover from the collection housed in a glassine envelope.\
-\
-Pages: 300\
-Dimensions: 115 x 155mm\
+An altered facsimile of *Oma’s Fortune*, a book of pressed clovers handed down to Rachel Roller (see original below).
+
+The special edition of 25 copies features an original clover from the collection housed in a glassine envelope.
+
+Pages: 300
+Dimensions: 115 x 155mm
 Printing: Offset\
 Binding: Ota-Binding\
 Year: 2026\
