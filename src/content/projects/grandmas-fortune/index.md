@@ -14,7 +14,7 @@ An altered facsimile of *Oma’s Fortune*, a book of pressed clovers handed down
 
 The special edition of 25 copies features an original clover from the collection housed in a glassine envelope.
 
-Pages: 300
+Pages: 360
 Dimensions: 115 x 155mm
 Printing: Offset
 Binding: Ota-Binding
